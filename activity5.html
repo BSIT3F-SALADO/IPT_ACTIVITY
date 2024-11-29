@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Cycle</title>
+</head>
+<body>
+    <p id="colorText">This text will change color each time you click the button.</p>
+    <button onclick="cycleColor()">Cycle Color</button>
+
+    <script>
+        const colors = ["red", "black", "green", "blue"];
+        let colorIndex = 0;
+
+        function cycleColor() {
+            const text = document.getElementById("colorText");
+            text.style.color = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length; // Loop back to the start
+        }
+    </script>
+</body>
+</html>
